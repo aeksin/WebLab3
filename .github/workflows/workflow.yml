@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
 
 env:
-  VITE_WEATHER_API_KEY: ${{secrets.VITE_OPENWEATHER_API_KEY }}
+  VITE_OPENWEATHER_API_KEY: ${{secrets.VITE_OPENWEATHER_API_KEY }}
   VITE_GEOCODER_API_KEY: ${{secrets.VITE_GEOCODER_API_KEY }}
 
 # Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
@@ -47,7 +47,7 @@ jobs:
       - name: Build
         run: npm run build
         env: 
-          VITE_WEATHER_API_KEY: ${{secrets.VITE_OPENWEATHER_API_KEY }}
+          VITE_OPENWEATHER_API_KEY: ${{secrets.VITE_OPENWEATHER_API_KEY }}
           VITE_GEOCODER_API_KEY: ${{secrets.VITE_GEOCODER_API_KEY }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
